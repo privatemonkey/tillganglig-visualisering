@@ -1,29 +1,14 @@
-# sapper-md-netlify-cms-starter
+# Tillgänglig visualisering
 
 ## [![Netlify Status](https://api.netlify.com/api/v1/badges/2ad49513-ef65-4023-999f-1ad64bf08818/deploy-status)](https://app.netlify.com/sites/sapper-md-netlify-cms-starter/deploys)
 
-An expansion of the default [Sapper](https://github.com/sveltejs/sapper) template in the following ways:
+## Tech
+
+An expansion of the default [Sapper](https://github.com/sveltejs/sapper) template:
 
 - blog posts are generated from markdown files in `content/posts`
 - pages are able to be built from markdown files in `content/pages`
 - netlify cms allows for editing of both blog posts and markdown source pages
-
-## Getting Started
-
-
-### Using `degit`
-
-[`degit`](https://github.com/Rich-Harris/degit) is a scaffolding tool that lets you create a directory from a branch in a repository. Use either the `rollup` or `webpack` branch in `sapper-template`:
-
-```bash
-npx degit "edm00se/sapper-md-netlify-cms-starter" my-app
-```
-
-
-### Using GitHub Templates
-
-Alternatively, you can use GitHub's template feature with the [sapper-template-rollup](https://github.com/edm00se/sapper-md-netlify-cms-starter) repository.
-
 
 ### Running the project
 
