@@ -1,6 +1,6 @@
 ---
-title: About
+title: Om
 ---
-# About encharted
+# Om webbplatsen
 
-Encharted is a site about visualisation
+Innehåller riktlinjer och stöd för att göra tillgängliga tabeller och diagram
