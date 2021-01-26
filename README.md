@@ -1,8 +1,6 @@
 # Tillgänglig visualisering
 
-## [![Netlify Status](https://api.netlify.com/api/v1/badges/2ad49513-ef65-4023-999f-1ad64bf08818/deploy-status)](https://app.netlify.com/sites/sapper-md-netlify-cms-starter/deploys)
-
-## Tech
+## About
 
 An expansion of the default [Sapper](https://github.com/sveltejs/sapper) template:
 
