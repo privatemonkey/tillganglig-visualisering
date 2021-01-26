@@ -1,5 +1,7 @@
 # Tillgänglig visualisering
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/718ae9ac-4b28-458e-8ea8-f34ba136ff56/deploy-status)](https://app.netlify.com/sites/encharted/deploys)
+
 ## About
 
 An expansion of the default [Sapper](https://github.com/sveltejs/sapper) template:
