@@ -14,49 +14,48 @@
 </script>
 
 <script>
-	export let page;
+  import Index from '../components/Index.svelte'
+
+  export let page;
+  let y;
 </script>
 
-<style>
-	/*
-		By default, CSS is locally scoped to the component,
-		and any unused styles are dead-code-eliminated.
-		In this page, Svelte can't know which elements are
-		going to appear inside the {{{page.html}}} block,
-		so we have to use the :global(...) modifier to target
-		all elements inside .content
-	*/
-	.content :global(h2) {
-		font-size: 1.4em;
-		font-weight: 500;
-	}
-
-	.content :global(pre) {
-		background-color: #f9f9f9;
-		box-shadow: inset 1px 1px 5px rgba(0,0,0,0.05);
-		padding: 0.5em;
-		border-radius: 2px;
-		overflow-x: auto;
-	}
-
-	.content :global(pre) :global(code) {
-		background-color: transparent;
-		padding: 0;
-	}
-
-	.content :global(ul) {
-		line-height: 1.5;
-	}
-
-	.content :global(li) {
-		margin: 0 0 0.5em 0;
-	}
-</style>
+<svelte:window bind:scrollY={y}/>
 
 <svelte:head>
 	<title>{page.metadata.title}</title>
 </svelte:head>
 
-<div class='content'>
-	{@html page.html}
+<div class="content">
+  <aside id="index" class="sticky">
+    <Index content={page.content} slug={page.slug} />
+  </aside>
+
+  <article>
+    {@html page.html}
+  </article>
 </div>
+
+<style>
+  .sticky {
+    position: -webkit-sticky;
+    position: sticky;
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: 42rem 24rem;
+    grid-template-rows: auto;
+    grid-gap: 2rem;
+    grid-template-areas:
+    "article aside";
+  }
+
+  article {
+    grid-area: article;
+  }
+  aside {
+    grid-area: aside;
+    padding: 7rem 0 4rem;
+  }
+</style>

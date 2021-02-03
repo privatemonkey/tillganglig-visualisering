@@ -9,20 +9,23 @@ export function getPages () {
   const slugs = fs.readdirSync(WHERE_ALL_THE_MARKDOWN_DYNAMIC_PAGES_ARE)
     .filter(file => path.extname(file) === '.md')
     .map(file => file.slice(0, -3));
-  
+
   return slugs.map(getPage);
 }
 
 const renderHeadingWithAnchor = (slug) => (text, level) => {
-  var escapedText = text.toLowerCase().replace(/[^\w]+/g, '-');
+  // var escapedText = text.toLowerCase().replace(/[^\w]+/g, '-');
+  var slugger = new marked.Slugger()
+  var escapedText = slugger.slug(text)
   return `
-    <h${level}>
+    <h${level} id="${escapedText}">
       <a name="${escapedText}" aria-hidden="true" class="anchor" href="${slug}#${escapedText}">
         <span class="header-link"></span>
       </a>
       ${text}
     </h${level}>`;
 };
+
 
 export function getPage(slug) {
 
@@ -40,7 +43,6 @@ export function getPage(slug) {
   metadata.thumb = (thumb && thumb.indexOf(siteUrl) < 0) ? (siteUrl + '/' + thumb) : thumb;
 
   const html = marked(content, {
-    headerIds: true,
     smartypants: true,
     renderer: renderer,
   });
@@ -50,8 +52,21 @@ export function getPage(slug) {
     slug: alternateSlug || slug,
     metadata,
     html,
+    content
   };
 }
+
+/**
+ * Create chunks. May run recursivly as it will make a split on the level below highest level,
+ * @function
+ * @param {string} md - A markdown chunk.
+ * @param {string} id - An explicit ID given to the chunk
+ * @param {string} parentId - The ID of the parent
+ *
+ * TODO: Into own library
+ * TODO: Handle different header levels
+ * TODO: Handle header settings
+ */
 
 function processMarkdown(markdown) {
   const match = /---\n([\s\S]+?)\n---/.exec(markdown);
@@ -66,5 +81,5 @@ function processMarkdown(markdown) {
       .trim();
   });
 
-  return { metadata, content };
+  return { metadata, content};
 }

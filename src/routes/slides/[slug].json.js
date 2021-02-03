@@ -1,20 +1,21 @@
-import { getPages } from './_pages.js';
+import { getSlides } from './_slides.js';
 
 const lookup = new Map();
-getPages()
-  .forEach(page => {
-    lookup.set(page.slug, JSON.stringify(page));
+
+getSlides()
+  .forEach(slide => {
+    lookup.set(slide.slug, JSON.stringify(slide));
   });
 
 export function get(req, res, next) {
   // the `slug` parameter is available because
   // this file is called [slug].json.js
   const { slug } = req.params;
+
   if (lookup.has(slug)) {
     res.writeHead(200, {
       'Content-Type': 'application/json'
     });
-
     res.end(lookup.get(slug));
   } else {
     res.writeHead(404, {

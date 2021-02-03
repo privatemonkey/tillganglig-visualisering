@@ -1,13 +1,17 @@
 ---
-title: Sapper Markdown Blog and Pages Netlify CMS Starter
+title: Tillgänglig visualisering av statistik på webb 
 ---
 
-<!-- undefined is an awful file name but it keeps things kosher with sapper's generated files -->
+# Tillgänglig visualisering av statistik på webb 
 
-# Great success!
+**Att göra visualisering av statistik enkel och tillgänglig ökar möjligheten att fler kan ta del av den. Här finns stöd för hur du tar dig dit.**
 
-| ![Success Kid](/images/successkid.jpg) | 
-|:--:| 
-| *Have fun with Sapper!* |
+Syftet med stödet är att ge myndigheter och andra som publicerar statistik råd och vägledning för att visualisera statistik på ett mer tillgängligt sätt.
 
-**Try editing this file (content/pages/undefined.md) to test live reloading.**
+## Lathund för tillgängliga tabeller och diagram
+
+[Lathunden](/lathund)
+
+## Stöd för teknisk utformning av diagram
+
+[SCB:s diagramhandbok](https://scb.se/diagramhandboken) innehåller detaljerad stöd för att göra diagram.

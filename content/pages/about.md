@@ -1,6 +1,6 @@
 ---
 title: Om
 ---
-# Om webbplatsen
+# Om stödet
 
-Innehåller riktlinjer och stöd för att göra tillgängliga tabeller och diagram
+Stödet är gjort av en arbetsgrupp inom myndigheternas statistiksamarbete (SAM).

@@ -6,9 +6,9 @@
 
 An expansion of the default [Sapper](https://github.com/sveltejs/sapper) template:
 
-- blog posts are generated from markdown files in `content/posts`
+- content posts are generated from markdown files in `content/posts`
 - pages are able to be built from markdown files in `content/pages`
-- netlify cms allows for editing of both blog posts and markdown source pages
+- netlify cms allows for editing of both content posts and markdown source pages
 
 ### Running the project
 
@@ -27,14 +27,14 @@ Consult [sapper.svelte.dev](https://sapper.svelte.dev) for help getting started.
 
 ## Structure
 
-Sapper expects to find three directories in the root of your project —  `src`, `static`, and `content`. The `content` directory contains pages and blog posts in markdown files in their respective sub-directories, `static` is any static assets that need to be served, and `src` contains the majority of the sapper application.
+Sapper expects to find three directories in the root of your project —  `src`, `static`, and `content`. The `content` directory contains pages and content posts in markdown files in their respective sub-directories, `static` is any static assets that need to be served, and `src` contains the majority of the sapper application.
 
 ### `src/`
 
 Of note:
 
 - change the `siteUrl` in `src/stores/_config.js`
-- blog functionality is in `src/routes/blog/`
+- content functionality is in `src/routes/content/`
 - pages in `src/routes/`, other than the home page (`index.svelte`), are generated via `[slug].json.js` and `[slug].svelte`
 
 

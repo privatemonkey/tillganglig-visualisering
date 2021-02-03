@@ -31,9 +31,17 @@
 	<title>{status}</title>
 </svelte:head>
 
-<h1>{status}</h1>
+<article>
 
-<p>{error.message}</p>
+ {#if status==400}
+ <h1>Hittade inte sidan</h1>
+<p>Hittade ingen sida på adressen du angav</p>
+{/if}
+ {#if status==500}
+  <h1>Fel i hämtning</h1>
+  <p>Det inträffade ett fel då vi skulle hämta data</p>
+{/if}
+</article>
 
 {#if dev && error.stack}
 	<pre>{error.stack}</pre>

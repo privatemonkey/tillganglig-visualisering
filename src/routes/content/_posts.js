@@ -4,10 +4,10 @@ import marked from 'marked';
 import { computeMinutesToRead } from './_minutesToRead.js';
 import { siteUrl } from '../../stores/_config.js';
 
-const WHERE_ALL_THE_MARKDOWN_BLOG_POSTS_ARE = 'content/posts';
+const WHERE_ALL_THE_MARKDOWN_content_POSTS_ARE = 'content/posts';
 
 export function getPosts () {
-  const slugs = fs.readdirSync(WHERE_ALL_THE_MARKDOWN_BLOG_POSTS_ARE)
+  const slugs = fs.readdirSync(WHERE_ALL_THE_MARKDOWN_content_POSTS_ARE)
     .filter(file => path.extname(file) === '.md')
     .map(file => file.slice(0, -3));
 
@@ -29,7 +29,7 @@ const renderHeadingWithAnchor = (slug) => (text, level) => {
 
 export function getPost(slug) {
 
-  const file = `${WHERE_ALL_THE_MARKDOWN_BLOG_POSTS_ARE}/${slug}.md`;
+  const file = `${WHERE_ALL_THE_MARKDOWN_content_POSTS_ARE}/${slug}.md`;
   if (!fs.existsSync(file)) {
     return null;
   }

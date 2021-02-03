@@ -15,9 +15,9 @@ collections:
     fields:
       - { label: "Titel", name: "title", widget: "string" }
       - { label: "Innehåll", name: "body", widget: "markdown" }
-  - name: "blog" # Used in routes, e.g., /admin/collections/blog
-    label: "Blog" # Used in the UI
-    folder: "content/posts" # The path to the folder where our blog posts are stored
+  - name: "content" # Used in routes, e.g., /admin/collections/content
+    label: "content" # Used in the UI
+    folder: "content/posts" # The path to the folder where our content posts are stored
     create: true # Allow users to create new documents in this collection
     fields: # The fields for each document
       - { label: "Titel", name: "title", widget: "string" }
