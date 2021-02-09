@@ -1,12 +1,11 @@
 ---
 title: Lathund
 ---
-
 # Göra tillgängliga tabeller och diagram, en lathund
 
 Använd lathunden för att förstå vad tillgänglighet innebär för ditt arbete och hur du kan kommunicera statistik.
 
-## Introduktion
+## Introduktion ---
 
 Ett av regeringens mål är att tillgängligheten och användbarheten på offentliga webbplatser ska öka, så att de kan användas av så många som möjligt på ett så enkelt sätt som möjligt.
 
@@ -19,12 +18,12 @@ Denna norska film på 2 minuter förklarar detta på ett bra sätt. https://uu.d
 
 Lathunden utgår ifrån att vi inte kan veta med säkerhet för all framtid hur, av vem och med vilka förutsättningar någon kommer använda och förstå statistiken vi kommunicerar.
 
-Skapa dig bättre förståelse om [funktionsvariationer] och [funktionsvariationer i vardagen].
+Skapa dig bättre förståelse om \[funktionsvariationer] och \[funktionsvariationer i vardagen].
 
 ## Innehåll
 
-1. [Lagkrav och riktlinjer för tillgängliga tabeller och diagram]()
-2. [Innan du gör en visualisering]()
-3. [Vad gör en visualisering tillgänglig]()
-4. [När du utformar visualiseringen]()
-5. [Utvärdera och testa det du gjort]()
+1. [Lagkrav och riktlinjer för tillgängliga tabeller och diagram](<>)
+2. [Innan du gör en visualisering](<>)
+3. [Vad gör en visualisering tillgänglig](<>)
+4. [När du utformar visualiseringen](<>)
+5. [Utvärdera och testa det du gjort](<>)
